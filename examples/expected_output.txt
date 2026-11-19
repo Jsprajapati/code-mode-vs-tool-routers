@@ -1,0 +1,13 @@
+Output of the README step "Real model through Claude Code", run on a fresh clone (Haiku, 500 tools, request C1: count flagged ledger rows).
+Exact token counts vary a little run to run; the gap does not.
+
+$ DEMO_TYPED_STUBS=2 python3 dept_bench.py --model haiku --suite x500 --sizes 500 --reps 1 --only C1 --strategies all_tools,code_mode_search --out try.jsonl
+== size 500: 2 runs, 2 workers ==
+[   9s] haiku C1/code_mode_search r0 -> OK  turns=3 wrong=0
+[  16s] haiku C1/all_tools r0 -> OK  turns=2 wrong=0
+
+$ python3 dept_report.py try.jsonl
+| strategy | 500 tools: correct | avg input tokens (all sizes) | avg turns | wrong-department calls | tool errors |
+|---|---|---|---|---|---|
+| All tools | 1/1 | 133,905 | 2.0 | 0 | 0 |
+| Code Mode (search+exec) | 1/1 | 1,758 | 3.0 | 0 | 0 |

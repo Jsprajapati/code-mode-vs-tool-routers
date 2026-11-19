@@ -43,6 +43,8 @@ DEMO_TYPED_STUBS=2 python3 dept_bench.py --model haiku --suite x500 --sizes 500 
 python3 dept_report.py try.jsonl
 ```
 
+Expected shape (one run on a fresh clone, see `examples/expected_output.txt`): both strategies correct, plain MCP at about 134K input tokens, Code Mode at about 1.8K.
+
 ### 3. Real model through the Anthropic API (untested by the author)
 
 ```bash
