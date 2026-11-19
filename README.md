@@ -99,7 +99,7 @@ Headline at 500 tools, Claude Haiku, 36 runs per strategy (all-tools: 3 runs, al
 
 - One model (Haiku), two runs per request, one fixture family. Small differences are noise; large ones are the signal.
 - Tool calling is emulated through `claude -p`, not the native tool-use format.
-- Code Mode failures that exist: a script told to approve every pending request also approved one it should not (scenario D3, at smaller catalog sizes).
+- Code Mode can get this wrong: asked to approve every pending IT access request for the CRM system (scenario D3), it approved one extra request in most runs at 15, 50 and 150 tools. It was correct at 500 tools.
 - Vendor and third-party numbers quoted in the article are theirs, not reproduced here.
 - Sonnet and larger models were not run.
 
