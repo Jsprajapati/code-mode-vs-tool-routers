@@ -16,7 +16,7 @@ No Cloudflare account is needed. Code Mode here is a pattern you can run yoursel
 Python 3.10 or newer (tested on 3.13).
 
 ```bash
-git clone <repo-url> && cd code-mode-vs-tool-routers
+git clone https://github.com/Jsprajapati/code-mode-vs-tool-routers && cd code-mode-vs-tool-routers
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 ```
