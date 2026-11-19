@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.cli_cwd/
+*.log
+smoke*.jsonl
+try.jsonl
+.env
+.DS_Store

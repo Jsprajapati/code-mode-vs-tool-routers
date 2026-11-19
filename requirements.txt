@@ -1,0 +1,8 @@
+# Python 3.10+ (tested on 3.13)
+mcp==2.3.0          # official MCP SDK; the demo uses its v2 handler API and stateless HTTP mode
+httpx>=0.28
+uvicorn>=0.30       # runs the demo MCP servers
+starlette>=0.40     # normally installed with mcp; the servers use it directly
+
+# Only for `dept_bench.py --llm anthropic`:
+# anthropic>=0.40
